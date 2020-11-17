@@ -1,0 +1,41 @@
+first use the given commands:
+sudo apt install ssmtp
+sudo apt install mailutils
+folder permissions command:
+cd /etc/ssmtp
+chmod u=rwx,g=r,o= ssmtp.conf
+opening ssmtp:
+nano ssmtp.conf
+copy paste the following:
+UseSTARTTLS=YES
+FromLineOverride=YES
+root=
+mailhub=smtp.gmail.com:587
+AuthUser=username@gmail.com // enter your email address
+AuthPass=password // enter your gmail password or the app password (see step 1)
+^x to save
+creating a new script file:
+cd lab_4
+touch lab4_script.sh
+nano lab4_script.sh
+copy the following:
+#!/bin/bash
+# Authors : Helen Kim
+# Date: 09/20/2020
+to copy:
+cp /var/log/syslog /home/helen/
+egrep -i "error" syslog | tee error_log_check.txt
+then to mail it: 
+echo "testing message" | mutt -s "lab4 email" -a error_log_check.txt -- helen.kim@colorado.edu
+making it executable:
+chmod +x lab4_script.sh
+running the script:
+./lab4_script.sh
+cron job:
+5 4 3 2 1 /home/helen/
+delete cron job then
+git clone https://github.com/heki5656/Lab_3308
+cp -r https://github.com/heki5656/Lab_3308/tree/master/Lab_4 ./Labs3308
+git add .
+git commit -m "message"
+git push

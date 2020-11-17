@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td{
+	border-style: solid;
+	Text-align: center;
+}
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: lightgray;
+  color: black;
+}
+</style>
+<html lang="en">
+
+        <title>About Me</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="manage-card.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+        <button onClick="check()"></button>
+
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+          <!-- Links -->
+          <div class="container-fluid">
+              <ul class="navbar-nav mr-auto">
+              <li class="nav-item"> 
+              <a class="nav-link" href="..\mypage_bootstrap.html">Home</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="..\projects.html">Projects</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="..\signup-modal\login.html">Sign Up Modal</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="..\tic-tac-toe\tic-tac-toe.html">Tic Tac Toe Game</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="..\flickr\index.html">Flickr Gallery</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-right">
+              <li class="nav-item pull-right">
+              <a class="navbar-brand pull-sm-right m-r-0" href="https://github.com/heki5656"><i class="fa fa-github"></i></a>
+              </li>
+            </ul>
+          </div>
+      </nav>
+
+        <div class="container">
+
+          <h1>Kim, Helen <small> - Software Development Methods and Tools</small></h1>
+          <br>
+          <p>
+            <div class="card">
+              <div class="card-body">Three interesting thigns about me: 
+                I have a kind of bent spine. It's not scoliosis where it bends to the side but it bends inwards towards my organs.
+                I have lived in the same house for near my entire life, except for the first few months after I was born.
+                I like history but mostly nature documentaries, the visuals are amazing.
+                I'm studying computer science because it was recommended to me by my mom since I didn't really have a preference for what I studied in college.</div>
+            </div>
+          </p>
+          <br>
+          <br>
+          <img src="..\HW4\resources\nature-1598134094376-9755.jpg" class = "rounded-circle" alt="picture of a forest (in place of a personal pic)" height="500px" width="700px"> 
+          <br>
+          <br>
+          <br>
+
+          <div style="clear:both">
+            <h4 style="display:inline">Interests</h4>
+            <a role="button" href="./form.html" type="button" class="btn btn-info" style="justify-content:center display:inline">Add Interest</a><br>
+          </div>
+          <br>
+          <div class="card-group">
+            <div id="interest1">
+            <div class="card" style="width:400px">
+                <div class="card-body">
+                  <img class="card-img-top" src="..\HW4\resources\pexels-photo-1212407.jpeg" alt="Card image"> 
+                    <h4 class="card-title">Painting</h4>
+                    <p class="card-text">Painting is a hobby I enjoy :)</p>
+               </div>
+            </div>
+               <a class="btn btn-primary btn-sm mr-auto" role="button" onclick="addCard('interest1')" style="border-radius: 20em; width: 100%">+</a>
+            </div>
+            <div id="interest2">
+            <div class="card" style="width:400px">
+                <div class="card-body">
+                  <img class="card-img-top" src="..\HW4\resources\26-269838_hiking-clipart-jungle-trekking-hiking-trail-clip-art.png" alt="Card image"> 
+                    <h4 class="card-title">Strolls/walks</h4>
+                    <p class="card-text">I like taking walks as a form of exercise and peace of mind</p>
+               </div>
+            </div>
+            <a class="btn btn-primary btn-sm mr-auto" role="button" onclick="addCard('interest2')" style="border-radius: 20em; width: 100%">+</a>
+            </div>
+          <div id="interest3">
+          <div class="card" style="width:400px">
+            <div class="card-body">
+              <img class="card-img-top" src="..\HW4\resources\youtube-logo-illustration-1280x720.jpg" alt="Card image">
+                <h4 class="card-title">Youtube</h4>
+                <p class="card-text">Youtube provides short entertainment</p>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-sm mr-auto" role="button" onclick="addCard('interest3')" style="border-radius: 20em; width: 100%">+</a>
+          </div>
+        </div>
+        <footer>
+          <a href="https://www.linkedin.com/in/helen-kim-171065196/" class="fa fa-linkedin-square" style="font-size:36px"></i>
+         </a>
+        </footer>
+
+      </div>
+    <script src="./manage-card.js"></script>
+</body>
+</html>
