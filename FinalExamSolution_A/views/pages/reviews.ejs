@@ -1,0 +1,24 @@
+<%- include ('../partials/header') %>
+<%- include ('../partials/menu') %>
+
+<div class="container" style="padding-top:2%;">
+  <h4 class="text-center">Movie reviews</h4>
+  <table class = "table table-bordered">
+    <thead>
+      <tr>
+        <th>Movie</th>
+        <th>Review</th>
+        <th>Review Date</th>
+      </tr>
+    </thead>
+  <% if(data){data.forEach(row =>{ %>
+    <tr>
+        <td> <%= row.title %> </td>
+        <td> <%= row.review %> </td>
+        <td> <%= row.review_date %> </td>
+    </tr>
+  <% })} %>
+  </table>
+</div>
+
+<%- include ('../partials/footer') %>
